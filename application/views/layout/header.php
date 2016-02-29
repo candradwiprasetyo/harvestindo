@@ -10,7 +10,8 @@
 
    
     <script src="<?= base_url('assets/js/bootstrap/jquery.js') ?>"></script>
-<script src="<?= base_url('assets/js/bootstrap/bootstrap.min.js') ?>"></script>
+	<script src="<?= base_url('assets/js/bootstrap/bootstrap.min.js') ?>"></script>
+
     <link href="<?= base_url('assets/css/genericons-ver=3.0.3.css') ?>" rel="stylesheet">
     
     <link href="<?= base_url('assets/css/style-ver=4.3.1.css') ?>" rel="stylesheet">
@@ -21,9 +22,9 @@
     
     <script type='text/javascript' src='<?= base_url('assets/js/jquery-migrate.min.js?ver=1.2.1') ?>'></script>
     
-    <link href="<?= base_url('assets/css/nouslider/nouislider.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/nouslider/nouislider.pips.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/nouslider/nouislider.tooltips.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/nouislider/nouislider.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/nouislider/nouislider.pips.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/nouislider/nouislider.tooltips.css') ?>" rel="stylesheet">
     
     <link href="<?= base_url('assets/css/bootstrap/bootstrap.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/bootstrap/bootstrap-theme.min.css') ?>" rel="stylesheet">
@@ -33,7 +34,7 @@
     
   </head>
 
-  <body class="home blog masthead-fixed list-view full-width grid">
+  <body>
   
   
   <div class="">
@@ -72,12 +73,15 @@
                         </div>
                         <div class="navbar-collapse collapse menuwrap">
                                 <ul class="group navbar-nav" id="menugroup">
-                                    <li class="current_page_item"><a  href="#" id="gotowhatis" >What is Hashfield</a></li>
-                                    <li><a  href="#" id="gotohprod" >Our Products</a></li>
-                                    <li><a href="#">Referral Program</a></li>
-                                    <li><a  href="#" id="gotohshop">Shop Now</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="dashboard/index.html">My Account</a></li>
+                                    
+                                   
+                                    <li class="current_page_item"><a  href="<?= site_url() ?>#whatishead">What is Hashfield</a></li>
+                                    <li><a  href="<?= site_url() ?>#hprodwrap">Our Products</a></li>
+                                    <li><a  href="<?= site_url() ?>referral_program">Referral Program</a></li>
+                                    <li><a  href="<?= site_url() ?>#hshop">Shop Now</a></li>
+                                    <li><a  href="<?= site_url() ?>faq">FAQ</a></li>
+                                    <li><a  href="dashboard/index.html">My Account</a></li>
+									
                                  </ul>
                         </div>
 					</div>

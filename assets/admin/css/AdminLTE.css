@@ -2380,7 +2380,7 @@ Component: timeline
   
   font-weight: 300;
   color: #fff;
-  background:#00ACD6;
+  background:#B4CE53;
   
 }
 .form-box .body{
@@ -2562,7 +2562,7 @@ Component: timeline
 /* skin-blue logo */
 
 .skin-blue .logo {
-  background-color: #477CBD;
+  background-color: #B4CE53;
   color: #f9f9f9;
   font-family: arial;
 }
@@ -2571,7 +2571,7 @@ Component: timeline
   
 }
 .skin-blue .logo:hover {
-  background: #477CBD;
+  background: #B4CE53;
   text-decoration: none;
 }
 /* Skin-blue user panel */
@@ -2974,4 +2974,10 @@ Component: timeline
   margin-bottom:10px;
   margin-left:auto;
   margin-right:auto;
+}
+
+
+
+#cke_1_contents{
+	height:300px !important;
 }

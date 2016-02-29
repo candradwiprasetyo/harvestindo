@@ -290,6 +290,10 @@ img.emoji {
 	color:#333;
 }
 
+.container_page{
+	min-height:400px;
+}
+
 @media (max-width: 768px){
 
 .navbar-header {

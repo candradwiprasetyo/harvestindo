@@ -14,9 +14,11 @@ class Gallery extends CI_Controller {
 	public function index() {
 		
 		$data['title'] = "Gallery hashfield";
+		
+		$list_gallery =  $this->gallery_model->list_gallery();
 	
  		$this->load->view('layout/header', array('data' => $data));
-		$this->load->view('gallery/index');
+		$this->load->view('gallery/index', array('list_gallery' => $list_gallery));
 		$this->load->view('layout/footer'); 
 		
  	}

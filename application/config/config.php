@@ -17,6 +17,7 @@
 |
 */
 $config['base_url'] = 'http://localhost:81/harvestindo/';
+//$config['base_url'] = 'http://jasabrandingsurabaya.com/hashfield/';
 
 /*
 |--------------------------------------------------------------------------

@@ -66,6 +66,12 @@ class Access
 		return $new_date." / ".$new_time;
 	}
 	
+	public function usd_format_number($data){
+		$data = number_format($data, 0);
+		
+		return "USD ".$data;
+	}
+	
 	public function get_valid_img($img){
 		
 		if(@getimagesize($img)){

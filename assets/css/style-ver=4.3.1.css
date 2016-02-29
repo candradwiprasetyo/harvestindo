@@ -577,12 +577,11 @@ h6 { font-size: 1em; }
 
 .hprod p {
     color:#064e8c;
-    font-size:1em;
-    width:50%;
+    font-size:0.8em;
     padding-top:3%;
-    padding-left:5%;
-    padding-right:5%;
-       
+    padding-left:30px;
+    padding-right:30px;
+	padding-bottom:30px;
     margin:auto;
     text-align:center;
 }
