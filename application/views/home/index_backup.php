@@ -1,5 +1,4 @@
 
-<!-- normal -->
 <div class="topper">
 
             <div class="toppernumcontainer">
@@ -50,8 +49,7 @@
             <div class="downarrow"><img src="<?= base_url() ?>/assets/images/downarrow.png" class="respimg"></div>
 </div>
 
-
-<!-- normal -->
+    
 <div class="whatishead" id="whatishead">
         <div class="container">
             <div class="row">
@@ -63,7 +61,7 @@
                 
                 <div class="col-md-5">
                         
-                                
+                                <!--<h1>Our <strong>Company</strong></h1>-->
                                 <?= $data_content['about'] ?>
                                 
                                 <a href="what-is-hashfield/index.html"><h2>Read More</h2><div class="rmstripe"></div></a>
@@ -94,10 +92,7 @@
             </div>
         </div>
 </div>
-
-
-<!-- normal -->
- 
+    
 <div class="featuresbar">
             <img src="<?= base_url() ?>assets/images/features.png" class="respimg">
 </div>
@@ -121,16 +116,14 @@
 
             </div>
 </div>
-
-
-
-
+    
 <div class="hiwwrap">
+
     <div class="container">
         <div class="title_new">HOW IT WORKS</div>
         	<div class="row">
             
-            <div class="col-md-10 col-md-offset-2">
+            <div class="col-md-12 col-md-offset-1">
             <?php
            foreach($list_how as $row_how): 
 		   
@@ -147,8 +140,7 @@
             
             </div>
         </div>
-</div>
-
+    </div>
 
     <div class="hprodwrap" id="hprodwrap">
      	<div class="title_new2">OUR <strong>PRODUCTS</strong></div>
@@ -188,36 +180,26 @@
         </div>
         
     </div>
-
-  
-
-
-<div class="hshop" id="hshop">
-<div class="container">
-        <div class="title_new" style="margin-bottom:50px;">SHOP NOW</div>
-        
-        
-        	<div class="col-md-9 col-md-offset-2">
-           
+    
+    <div class="hshop" id="hshop">
+        <div class="title_new">SHOP NOW</div>
+        <div class="hsgrid">
+        	<div class="col-md-12 col-md-offset-1">
             <?php
-			for($i=1; $i<=12; $i++){
            foreach($list_products as $row_products): 
 		   ?>
             <a href="<?= site_url() ?>product_view/view/<?= $row_products['product_id'] ?>">
                 <div class="col-md-3">
-                        <div class="form-group">
-                        <img src="<?= base_url() ?>assets/images/products/<?= $row_products['product_img'] ?>" class="respimg">
-                        <h2><?= $row_products['product_name'] ?></h2>
-                        </div>
-                   
+                    <img src="<?= base_url() ?>assets/images/products/<?= $row_products['product_img'] ?>" class="respimg">
+                    <h2><?= $row_products['product_name'] ?></h2>
                 </div>
             </a>
           	<?php
 			
 			endforeach;
-			}
 		  	?>
           	</div>
+            
             <div class="clearfix"></div>
             
             <a class="shoplink" href="<?= site_url() ?>shop_now">
@@ -226,8 +208,8 @@
                 </div>
             </a>
             <div class="clearfix"></div>
-        
-   </div>
+        </div>
+    </div>
 </div>
 
    

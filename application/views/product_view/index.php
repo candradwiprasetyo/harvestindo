@@ -1,6 +1,5 @@
-
-     
-        <div class="stdpage ">
+<div class="stdpage ">
+<div class="container">
                             <div class="shopdetail">
                     <div class="shopimg">
                         <img src="<?= base_url() ?>assets/images/products/<?= $data_product['product_img']?>" class="respimg">
@@ -69,5 +68,4 @@
                         BUY NOW
                     </div>
                 </div>
-               
 </div>

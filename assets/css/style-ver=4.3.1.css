@@ -639,12 +639,11 @@ h6 { font-size: 1em; }
 
 .stdpage {
     position:relative;
-    width:80%;
+    width:100%;
     min-height:300px;
     background:#eaedf2 url('images/bg_page_wh.jpg') no-repeat center top;
     background-size: 100% auto;
     color:black;
-    padding:48px 10%;
 }
 
 .stdpage.galbg {
@@ -724,18 +723,12 @@ h6 { font-size: 1em; }
     font-weight:bold;
 }
 .hsgrid {
-    width:80%;
-    padding:12px 10% 24px;
+    width:100%;
     position: relative;
 }
 
 .hsitem {
     position: relative;
-    width:20%;
-    padding: 32px 0 16px;
-    margin-left:2.5%;
-    margin-right:2.5%;
-    float:left;
 }
 .hsitem h2 {
     font-size:2em;
@@ -763,15 +756,13 @@ h6 { font-size: 1em; }
     margin-bottom:40px;
 }
 .galbg .hsitem {
-    width:20%;
-    padding:10px 0 0;
-    margin:10px 1% 20px;
+   
     border: 2px solid #b4ce53;
     border-bottom:none;
 }
 .hsitem img {
     width:90%;
-    padding:0 5%;
+    padding:5% 5%;
 }
 .galbg .hsitem h2 {
     font-size:1em;
