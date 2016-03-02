@@ -6,7 +6,7 @@
 
 <div class="footer_new">
     <div class="container">
-        <div class="row">
+       
             
                 <div class="col-md-2">
                     <div class="form-group">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 
-         </div>
+         
     </div>
 </div>
 

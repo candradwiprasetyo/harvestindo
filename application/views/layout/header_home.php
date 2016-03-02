@@ -40,27 +40,29 @@
   <div class="">
    
     <div class="navbar navbar-default" style="background:#B4CE53">
-        <div class="container">
+      
           
-          <div class="navbar-collapse" style="margin-top:0px;">
+          <div class="" style="margin-top:0px;">
             <ul class="nav navbar-nav">
-              <li><a class="runner">HIGH : 5,135,000</a></li>
-              <li><a class="runner">LOW : 4,992,100</a></li>
-              <li><a class="runner">VOL (BTC) : 1,439,66166803</a></li>
-              <li><a class="runner">VOL (IDR) : 7,329,465,134</a></li>
-              <li><a class="runner">LAST : 5,078,800</a></li>
-              <li><a class="runner">BUY : 5,069,000</a></li>
-              <li><a class="runner">SELL : 5,075,900</a></li>
+              <div class="runner">HIGH : 5,135,000</div>
+              <div class="runner">LOW : 4,992,100</div>
+              <div class="runner">VOL (BTC) : 1,439,66166803</div>
+              <div class="runner">VOL (IDR) : 7,329,465,134</div>
+              <div class="runner">LAST : 5,078,800</div>
+              <div class="runner">BUY : 5,069,000</div>
+              <div class="runner">SELL : 5,075,900</div>
+              
+              <div class="toprightmenu"><a href="javascript:void();" id="openusermenu"><img src="<?= base_url() ?>assets/images/toprightmenu.png" class="respimg"></a></div>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </div>
+     
    
 </div>
 
 
             <div class="navbar navbar-default">
-                    <div class="container">
+                    <div class="container padding-container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                               <span class="sr-only">Toggle navigation</span>
@@ -79,7 +81,7 @@
                                     <li><a href="<?= site_url() ?>referral_program">Referral Program</a></li>
                                     <li><a  href="#" id="gotohshop">Shop Now</a></li>
                                     <li><a href="<?= site_url() ?>faq">FAQ</a></li>
-                                    <li><a href="dashboard/index.html">My Account</a></li>
+                                    <li><a  href="<?= site_url() ?>myaccount">My Account</a></li>
                                    
                                  </ul>
                         </div>
@@ -87,3 +89,11 @@
             </div>
 
 <br>
+<div class="usermenu">
+                            <ul>
+                                    <li>Hello, Hashfield!</li>
+                                    <li><a href="dashboard/index.html">DASHBOARD</a></li>
+                                    <li><a href="#">LOGOUT</a></li>
+                                    <li><a href="#">ENG</a></li>
+                            </ul>
+                    </div>

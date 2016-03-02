@@ -37,14 +37,7 @@
                         }
                     </style>
 
-                    <div class="usermenu">
-                            <ul>
-                                    <li>Hello, Hashfield!</li>
-                                    <li><a href="dashboard/index.html">DASHBOARD</a></li>
-                                    <li><a href="#">LOGOUT</a></li>
-                                    <li><a href="#">ENG</a></li>
-                            </ul>
-                    </div>
+                    
             </div>
 
             <div class="downarrow"><img src="<?= base_url() ?>/assets/images/downarrow.png" class="respimg"></div>
@@ -200,7 +193,7 @@
         	<div class="col-md-9 col-md-offset-2">
            
             <?php
-			for($i=1; $i<=12; $i++){
+			//for($i=1; $i<=12; $i++){
            foreach($list_products as $row_products): 
 		   ?>
             <a href="<?= site_url() ?>product_view/view/<?= $row_products['product_id'] ?>">
@@ -215,7 +208,7 @@
           	<?php
 			
 			endforeach;
-			}
+			//}
 		  	?>
           	</div>
             <div class="clearfix"></div>

@@ -95,7 +95,7 @@ strong {
 }
 
 body { 
-	font: normal 14px 'Source Sans Pro', sans-serif;
+	font: normal 14px 'Source Sans Pro', sans-serif !important;
 	color: #fff;
 	background: #F8F8F8;
 }
@@ -158,8 +158,10 @@ h6 { font-size: 1em; }
 	margin-right:10px;
 	padding-top:10px;
 	padding-bottom:10px;
-	
+	padding-left:10px;
 	text-transform: uppercase;
+	float:left;
+	padding-right:20px;
 }
 
 .topper {
@@ -201,7 +203,7 @@ h6 { font-size: 1em; }
 
 #menugroup {}
 #menugroup li {  }
-#menugroup li a { color: #064e8c; font-size: 1em; font-weight:bold;  padding: 0px 17px 0px 17px; text-decoration: none; text-transform: uppercase; }
+#menugroup li a { color: #064e8c; font-size: 1.1em; font-weight:bold;  padding: 0px 17px 0px 17px; text-decoration: none; text-transform: uppercase; }
 #magic-line { position: absolute; bottom:-3px; left: 0; width: 100px; height: 3px; background: #b3ce52; }
 
 .toppernum {
@@ -577,7 +579,7 @@ h6 { font-size: 1em; }
 
 .hprod p {
     color:#064e8c;
-    font-size:0.8em;
+    font-size:1em;
     padding-top:3%;
     padding-left:30px;
     padding-right:30px;
@@ -1269,21 +1271,27 @@ h6 { font-size: 1em; }
 
 
 .toprightmenu {
-	width:2.5%;
+	width:30px;
 	position:absolute;
 	right:1%;
-	top:10%;
+	top:5px;
 }	
 
 
 .usermenu {
-	width:7%;
-	padding:0.5% 0.6%;
+	width:150px;
 	background:#b4ce53;
 	position:absolute;
 	right:1%;
-	top:0.5%;
+	top:40px;
+	border:1px solid #064E8C;
+	z-index:9999;
 }
+.usermenu ul{
+	padding-left:10px;
+	padding-right:10px;	
+}
+
 .panright .usermenu {
     width:9%;
     top:1px;
@@ -1778,7 +1786,9 @@ h6 { font-size: 1em; }
         }
         
         #menugroup li a {
-            font-size:0.7em;
+            font-size:1.1em;
+			line-height:30px;
+			height:30px;
         }
         
         .runner {
@@ -1857,7 +1867,7 @@ h6 { font-size: 1em; }
         }
         
         #menugroup li a {
-            font-size:0.8em;
+            font-size:1.1em;
         }
 }
 
@@ -1918,7 +1928,7 @@ h6 { font-size: 1em; }
 
 @media screen and (min-width:1281px) and (max-width:1366px) {
 	body {
-		font-size:15px;
+		font-size:14px;
 	}
 	
 	.topper {
