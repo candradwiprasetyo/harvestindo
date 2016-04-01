@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link href="<?= base_url('assets/images/favicon.ico') ?>" type="image/x-icon" rel="shortcut icon">
-    <title><?= ucwords($data['title']) ?></title>
+    <title><?= ucwords($data_head['title']) ?></title>
 
    
     <script src="<?= base_url('assets/js/bootstrap/jquery.js') ?>"></script>
@@ -29,6 +29,7 @@
     <link href="<?= base_url('assets/css/bootstrap/bootstrap.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/bootstrap/bootstrap-theme.min.css') ?>" rel="stylesheet">
     
+     <link href="<?= base_url('assets/admin/css/font-awesome.min.css') ?>" rel="stylesheet">
      <!-- core CSS -->
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
     
@@ -44,15 +45,16 @@
           
           <div class="" style="margin-top:0px;">
             <ul class="nav navbar-nav">
-              <div class="runner">HIGH : 5,135,000</div>
-              <div class="runner">LOW : 4,992,100</div>
-              <div class="runner">VOL (BTC) : 1,439,66166803</div>
-              <div class="runner">VOL (IDR) : 7,329,465,134</div>
-              <div class="runner">LAST : 5,078,800</div>
-              <div class="runner">BUY : 5,069,000</div>
-              <div class="runner">SELL : 5,075,900</div>
-              
+             <?php
+             $this->load->view('layout/navbar'); 
+			 ?>
+              <?php
+if($this->session->userdata('hash_logged')){
+?>
               <div class="toprightmenu"><a href="javascript:void();" id="openusermenu"><img src="<?= base_url() ?>assets/images/toprightmenu.png" class="respimg"></a></div>
+              <?php
+}
+			  ?>
   
             </ul>
           </div><!--/.nav-collapse -->
@@ -92,11 +94,17 @@
 
 <br>
 
+<?php
+if($this->session->userdata('hash_logged')){
+?>
 <div class="usermenu">
                             <ul>
-                                    <li>Hello, Hashfield!</li>
-                                    <li><a href="dashboard/index.html">DASHBOARD</a></li>
-                                    <li><a href="#">LOGOUT</a></li>
-                                    <li><a href="#">ENG</a></li>
+                                    <li>Hello, <?= $data_user['user_first_name']?></li>
+                                    <li><a href="<?= site_url() ?>myaccount">DASHBOARD</a></li>
+                                     <?php if($this->access->get_cart($this->session->userdata('hash_user_id')) > 0){ ?><li><a href="<?= site_url() ?>payment">MY CART</a></li><?php } ?>
+                                    <li><a href="<?= site_url() ?>myaccount/logout">LOGOUT</a></li>
                             </ul>
                     </div>
+<?php
+}
+?>

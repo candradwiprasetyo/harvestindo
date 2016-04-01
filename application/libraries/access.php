@@ -8,7 +8,7 @@ class Access
 		$ci = & get_instance();
 		$sql = "select a.*, b.user_type_name from users a 
 				join user_types b on b.user_type_id = a.user_type_id 
-				where a.user_id = $id
+				where a.user_id = '$id'
 				";
 		
 		$query = $ci->db->query($sql);
@@ -194,6 +194,47 @@ class Access
 			
 		
  	}
+	
+	public function get_coinbase_buy(){
+		/*
+		$url = "https://api.coinbase.com/v2/prices/buy?currency=USD";
+		$jsonUrl = file_get_contents($url, False);
+		$json_idr = json_decode($jsonUrl, true);
+		//print_r($json_idr);
+		
+		$result = $json_idr['data']['amount'];
+		return number_format($result, 2);
+		*/
+		return "427.24";
+	} 
+	
+	public function get_coinbase_sell(){
+		/*
+		$url = "https://api.coinbase.com/v2/prices/sell?currency=USD";
+		$jsonUrl = file_get_contents($url, False);
+		$json_idr = json_decode($jsonUrl, true);
+		//print_r($json_idr);
+		$result = $json_idr['data']['amount'];
+		return number_format($result, 2);
+		*/
+		
+		return "418.67";
+	} 
+	
+	function get_cart($id)
+	{
+		$ci = & get_instance();
+		$sql = "select count(a.tr_id) as result	
+				from tr_instant_mining_details_tmp a
+				where a.user_id = '$id'
+				";
+		
+		$query = $ci->db->query($sql);
+		
+		$result = null;
+		foreach ($query->result_array() as $row) $result = ($row);
+		return $result['result'];
+	}
 
 	
 }

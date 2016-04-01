@@ -8,13 +8,13 @@
     <div class="container">
        
             
-                <div class="col-md-2">
+                <div class="col-sm-2">
                     <div class="form-group">
                          <img src="<?= base_url()?>assets/images/footerbig.png" class="respimg">
                     </div>
                 </div>
             
-                <div class="col-md-2">
+                <div class="col-sm-2">
                     <div class="form-group">
                         <div class="footermenu">
                             <ul>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             
-                <div class="col-md-2">
+                <div class="col-sm-2">
                     <div class="form-group">
                          <div class="footermenu">
                         <ul>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 
-                <div class="col-md-2">
+                <div class="col-sm-2">
                     <div class="form-group">
                          <div class="footermenu">
                                 <ul>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 
-                <div class="col-md-2">
+                <div class="col-sm-2">
                     <div class="form-group">
                           <div class="footermenu">
                                     <ul>

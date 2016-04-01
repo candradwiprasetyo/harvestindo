@@ -6,6 +6,7 @@ class Register extends CI_Controller {
 		parent::__construct();
 		$this->load->model('register_model');
 		$this->load->library('session');
+		$this->load->library('access');
 		$this->load->helper('url');
 		
 		$hash_logged = $this->session->userdata('hash_logged');
@@ -62,12 +63,12 @@ class Register extends CI_Controller {
 		$get_exist_username = $this->register_model->get_exist_username($data['user_username']);
 			
 			if($get_exist_username > 0){
-				redirect("login?err=2");
+				redirect("register?err=2");
 			}else{
 			
 				$id = $this->register_model->create_user($data);
 
-				redirect("register?did=1");
+				redirect("login?did=1");
 				
 			}
 		

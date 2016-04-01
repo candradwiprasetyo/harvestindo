@@ -13,7 +13,7 @@ class Product_view extends CI_Controller {
  	
 	public function view($id = 0) {
 		
-		$data['title'] = "product_view hashfield";
+		$data_head['title'] = "product view hashfield";
 	
 		$data_product = array();
 		$result = $this->product_view_model->read_id($id);
@@ -23,7 +23,7 @@ class Product_view extends CI_Controller {
 		}
 			
 		
- 		$this->load->view('layout/header', array('data' => $data));
+ 		$this->load->view('layout/header', array('data_head' => $data_head));
 		$this->load->view('product_view/index',  array('data_product' => $data_product));
 		$this->load->view('layout/footer'); 
 		

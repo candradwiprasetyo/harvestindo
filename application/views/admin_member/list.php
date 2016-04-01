@@ -17,7 +17,7 @@
                                                 <th>Images</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
-                                                <th>Workplace Name</th>
+                                                
                                                 <th>Type</th>
                                                 <th>Email</th>
                                                 <!--<th>Config</th>-->
@@ -29,10 +29,17 @@
 										   foreach($list as $row): ?>
                                             <tr>
                                                 <td><?= $no?></td>
-                                                <td><img src="<?= base_url(); ?>assets/images/profile/<?= $row['creative_img']?>" width="80" /></td>
+                                                <?php
+                                                if($row['user_img']){
+													$photo = $row['user_img'];
+												}else{
+													$photo = "default.jpg";
+												}
+												?>
+                                                <td><img src="<?= base_url(); ?>assets/images/user/<?= $photo ?>" width="80" /></td>
                                                 <td><?= $row['user_first_name']?></td>
                                                  <td><?= $row['user_last_name']?></td>
-                                                  <td><?= $row['creative_wp_name']?></td>
+                                                 
                                                    <td><?= $row['user_type_name']?></td>
                                                 <td><?= $row['user_email']?></td>
                                                 <!-- <td style="text-align:center;">
@@ -51,12 +58,12 @@
                                            
                                           
                                         </tbody>
-                                          <tfoot>
+                                          <!--<tfoot>
                                             <tr>
-                                                <td colspan="4"><a href="<?= $data_head['add_button'] ?>" class="btn btn-success " >Print Member</a></td>
+                                                <td colspan="6"><a href="<?= $data_head['add_button'] ?>" class="btn btn-success " >Add </a></td>
                                                
                                             </tr>
-                                        </tfoot>
+                                        </tfoot>-->
                                     </table>
 
                                 </div><!-- /.box-body -->

@@ -45,11 +45,58 @@
                                 
                             </ul>
                   </li>
+                  
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 8){ echo "class='active'"; } ?>>
+                            <a href="<?= site_url('admin_bank') ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Bank</span>
+                               
+                            </a>
+                            
+                  </li>
                  
                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 8){ echo "class='active'"; } ?>>
                             <a href="<?= site_url('admin_product') ?>">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>Products</span>
+                               
+                            </a>
+                            
+                  </li>
+                  
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 8){ echo "class='active'"; } ?>>
+                            <a href="<?= site_url('admin_payment_method') ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Payment Method</span>
+                               
+                            </a>
+                            
+                  </li>
+                  
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 8){ echo "class='active'"; } ?>>
+                            <a href="<?= site_url('admin_rate') ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Rate</span>
+                               
+                            </a>
+                            
+                  </li>
+                  
+                  
+                  
+                   <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 8){ echo "class='active'"; } ?>>
+                            <a href="<?= site_url('admin_instant_mining') ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Instant Mining</span>
+                               
+                            </a>
+                            
+                  </li>
+                  
+                  <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 8){ echo "class='active'"; } ?>>
+                            <a href="<?= site_url('admin_transaction') ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Transactions</span>
                                
                             </a>
                             
@@ -63,6 +110,19 @@
                                
                             </a>
                             
+                  </li>
+                  
+                  <li class="treeview <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 1){ echo "active"; }?>">
+                            <a href="#">
+                                <i class="fa fa-list-alt"></i>
+                                <span>Settings</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="<?= site_url() ?>admin_limit_transfer"><i class="fa fa-list-alt"></i>Limit transfer</a></li> 
+                             
+                                
+                            </ul>
                   </li>
                
             

@@ -7,9 +7,8 @@ class Admin_member_model extends CI_Model{
 	}
 	
 	function list_data() {
-		$query = "select a.*, b.creative_wp_name, creative_img, c.user_type_name
+		$query = "select a.*, c.user_type_name
 					from users a 
-					left join creatives b on b.user_id = a.user_id
 					left join user_types c on c.user_type_id = a.user_type_id
 					where a.user_type_id <> 1
 					order by user_id";

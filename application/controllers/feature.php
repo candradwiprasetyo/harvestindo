@@ -13,9 +13,16 @@ class Feature extends CI_Controller {
  	
 	public function index() {
 		
-		$data['title'] = "Feature Hashfield";
+		$data_head['title'] = "Feature Hashfield";
+		
+		$data_user = array();
+		$result = $this->access->get_data_user_admin($this->session->userdata('hash_user_id'));
+		
+		if($result){
+			$data_user  = $result;
+		}
 	
- 		$this->load->view('layout/header', array('data' => $data));
+ 		$this->load->view('layout/header', array('data_head' => $data_head, 'data_user' => $data_user));
 		$this->load->view('feature/index');
 		$this->load->view('layout/footer'); 
 		

@@ -6,6 +6,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 		$this->load->model('login_model');
 		$this->load->library('session');
+		$this->load->library('access');
 		$this->load->helper('url');
 		
 		$hash_logged = $this->session->userdata('hash_logged');
@@ -16,15 +17,12 @@ class Login extends CI_Controller {
  	
 	public function index() {
 		
-
-			
-			$data['title'] = "Login";
-			
+			$data_head['title'] = "Login";	
 			
 			$data['message'] = "";
 			
 			
-			$this->load->view('layout/header', array('data' => $data));
+			$this->load->view('layout/header', array('data_head' => $data_head));
 			$this->load->view('login/login_form', $data);
 			$this->load->view('layout/footer'); 
 		

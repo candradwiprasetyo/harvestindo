@@ -98,6 +98,7 @@ body {
 	font: normal 14px 'Source Sans Pro', sans-serif !important;
 	color: #fff;
 	background: #F8F8F8;
+	overflow-x:hidden;
 }
 
 p {
@@ -112,7 +113,7 @@ a {
 }
 
 a:hover {
-	color:#fff;
+	
 	text-decoration:underline;
 }
 
@@ -355,6 +356,7 @@ h6 { font-size: 1em; }
 }
 
 .hexwrap {
+	
 	position:relative;
 	width:100%;
 	margin-top:-37px;
@@ -366,6 +368,7 @@ h6 { font-size: 1em; }
 }
 
 .beehive {
+	/*
 	position:relative;
 	width:67.8%;
 	height:86.7%;
@@ -374,6 +377,7 @@ h6 { font-size: 1em; }
 	background:url('images/beehive.png') no-repeat center center;
 	background-size: 100% 100%;
 	pointer-events:none;
+	*/
 }
 
 .hexg {
@@ -821,7 +825,7 @@ h6 { font-size: 1em; }
     text-align: right;
 }
 .shopbuybtn {
-    width:30%;
+    width:200px;
     padding:20px 0 20px;
     color:white;
     background:#b4ce53;
@@ -884,22 +888,22 @@ h6 { font-size: 1em; }
 }
 .panleft {
     position:relative;
-    width:20%;
-    float:left;
-    background:#fff url('images/bg_menu.jpg') no-repeat center top;
+    /*background:#fff url('images/bg_menu.jpg') no-repeat center top;*/
+	background:#f0f3f6;
     background-size: 100% auto;
+	padding-top:24px;
 }
 .panleft .logowrap {
     position:relative;
     width:80%;
     margin:auto;
     float:none;
-    margin-top:24px;
 }
 .panleft .profilewrap {
     position:relative;
     width:100%;
     margin-top:48px;
+	text-align:center;
 }
 .panleft .profilewrap h4 {
     color: #405c8f;
@@ -909,8 +913,6 @@ h6 { font-size: 1em; }
 }
 .panright {
     position:relative;
-    width:80%;
-    float:left;
     background:#fff;
     padding-bottom:48px;
 }
@@ -967,6 +969,7 @@ h6 { font-size: 1em; }
     position:relative;
     width:90%;
     padding:80px 5% 16px;
+	color:#000;
 }
 .mtabs {
     width:100%;
@@ -993,16 +996,19 @@ h6 { font-size: 1em; }
 }
 .moptions {
     position: relative;
-    width:90%;
-    padding:48px 5% 32px;
+    width:100%;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 .moption {
     position:relative;
-    width: 45%;
-    padding:0 2.5% 32px;
-    float:left;
 }
 .moption a {
+    color:white;
+    text-decoration: none;
+}
+
+.moption a:hover {
     color:white;
     text-decoration: none;
 }
@@ -1205,6 +1211,7 @@ h6 { font-size: 1em; }
 .footer_new{
 	padding-top:20px;
 	background:#A7C140;
+	color:#fff;
 }
 
 .flogoandmenu {
@@ -1439,6 +1446,21 @@ h6 { font-size: 1em; }
     float:right;
 }
 
+.btnbuy_new {
+    position: relative;
+    width:40%;
+    background:#b4ce53;
+    color:white;
+    font-weight:bold;
+    font-size:1.2em;
+    padding-top:16px;
+    padding-bottom:16px;
+    cursor:pointer;
+    text-align:center;
+    float:right;
+}
+
+
 .invbuttons {
     width:70%;
     margin:auto;
@@ -1467,9 +1489,10 @@ h6 { font-size: 1em; }
 .dbhead {
     position: relative;
     width:90%;
-    padding:24px 5%;
-    background: url('images/bg_dashboard.jpg') no-repeat center top;
+    padding:10px 10px;
+    background: url('images/bg_dashboard.jpg') no-repeat center top #8DB33F;
     background-size: 100% auto;
+	color:#fff;
 }
 .dbhex {
     position: relative;
@@ -1510,9 +1533,9 @@ h6 { font-size: 1em; }
     position: relative;
     font-weight:bold;
     text-align:center;
-    padding-top:16px;
+    padding-top:0px;
     color:white;
-    font-size:3em;
+    font-size:2em;
 }
 .dbhex1 h2 span {
     display:block;
@@ -1524,7 +1547,7 @@ h6 { font-size: 1em; }
     position: relative;
     font-weight:bold;
     text-align:center;
-    padding-top:24px;
+    padding-top:0px;
     color:#b4ce53;
     font-size:1.8em;
 }
@@ -1543,9 +1566,9 @@ h6 { font-size: 1em; }
     position: relative;
     font-weight:bold;
     text-align:center;
-    padding-top:16px;
+    padding-top:0px;
     color:white;
-    font-size:2.5em;
+    font-size:2em;
 }
 .dbhex2 h2 span, .dbhex3 h2 span, .dbhex4 h2 span {
     display:block;
@@ -1735,7 +1758,7 @@ h6 { font-size: 1em; }
 	}
 	
 	.hexwrap {
-		height:970px;
+		
 	}
 	
         .hexwrap h3 {

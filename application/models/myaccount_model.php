@@ -7,25 +7,31 @@ class Myaccount_model extends CI_Model{
 	}
 	
 
-	function read_id($id)
-	{
-		$this->db->select('a.*', 1); // ambil seluruh data
-		$this->db->where('a.page_id', $id);
-		$query = $this->db->get('pages a', 1); // parameter limit harus 1
-		$result = null; // inisialisasi variabel. biasakanlah, untuk mencegah warning dari php.
-		foreach($query->result_array() as $row)	$result = ($row); // render dulu dunk!
-		return $result; 
-	}
+	function get_instant_mining($user_id){
 
-	function update($data, $id){
 
-		$this->db->trans_start();
-		$this->db->where('page_id', $id);
-		$this->db->update('pages', $data);
+
+		$sql = "select 
+							sum(h.tr_amount) as result
+					from transactions a 
+					join tr_instant_minings b on b.tr_im_id = a.transaction_data_id
+					join tr_instant_mining_details h on h.tr_im_id = b.tr_im_id
+					join instant_mining_details c on c.imd_id = h.imd_id
+					join instant_minings d on d.im_id = c.im_id
+					join payment_methods e on e.payment_method_id = a.payment_method_id
+					join status f on f.status_id = a.status_id
+					
+					where a.user_id = '$user_id' and a.transaction_type_id = '1' and a.status_id = 2 order by transaction_id";
+		
+		$query = $this->db->query($sql);
+		
+		$result = null;
+		foreach ($query->result_array() as $row) $result = ($row);
+		return $result['result'];
 	
-		$this->db->trans_complete();
-		return $id;
-	}
+		
+
+	}	
 	
 	
 }

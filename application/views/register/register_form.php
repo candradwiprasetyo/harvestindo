@@ -19,7 +19,7 @@
                                             	<?php
 												}else if(isset($_GET['did']) && $_GET['did'] == 1){
 												?>
-                                            	<div class="message_did">The username is already taken. Please use another username</div>
+                                            	<div class="message_did">Register success</div>
                                             	<?php
 												}
 												

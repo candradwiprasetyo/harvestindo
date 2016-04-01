@@ -13,15 +13,17 @@ class Shop_now extends CI_Controller {
  	
 	public function index() {
 		
-		$data['title'] = "shop_now hashfield";
+		$data_head['title'] = "Shop Now hashfield";
 		
 		$list_product =  $this->shop_now_model->list_product();
 	
- 		$this->load->view('layout/header', array('data' => $data));
+ 		$this->load->view('layout/header', array('data_head' => $data_head));
 		$this->load->view('shop_now/index', array('list_product' => $list_product));
 		$this->load->view('layout/footer'); 
 		
  	}
+
+ 	
 	
 	
 }
